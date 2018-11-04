@@ -29,8 +29,6 @@ devtools::install_github("tylurp/brewr")
 
 ## Example
 
-Pull :
-
 ```{r example}
 brewr::brewr("formula/sqlite")
 ```
