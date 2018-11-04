@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# brewr
+[![Travis build status](https://travis-ci.org/tyluRp/brewr.svg?branch=master)](https://travis-ci.org/tyluRp/brewr)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/tyluRp/brewr?branch=master&svg=true)](https://ci.appveyor.com/project/tyluRp/brewr)
+[![Codecov test coverage](https://codecov.io/gh/tyluRp/brewr/branch/master/graph/badge.svg)](https://codecov.io/gh/tyluRp/brewr?branch=master)
+
+The goal of brewr is to access Homebrews JSON API in R.
+
+## Installation
+
+You can install brewr from github using [`devtools`](https://github.com/r-lib/devtools) with:
+
+``` r
+devtools::install_github("tylurp/brewr")
+```
+
+## Example
+
+Pull :
+
+```{r example}
+brewr::brewr("formula/sqlite")
+```
