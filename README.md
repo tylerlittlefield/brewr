@@ -10,7 +10,8 @@ status](https://ci.appveyor.com/api/projects/status/github/tyluRp/brewr?branch=m
 [![Codecov test
 coverage](https://codecov.io/gh/tyluRp/brewr/branch/master/graph/badge.svg)](https://codecov.io/gh/tyluRp/brewr?branch=master)
 
-The goal of brewr is to access Homebrews JSON API in R.
+The goal of brewr is to access [Homebrews JSON
+API](https://formulae.brew.sh/docs/api/) in R.
 
 ## Installation
 
@@ -23,8 +24,14 @@ devtools::install_github("tylurp/brewr")
 
 ## Example
 
+Use the `brewr()` function to access all API endpoints. The endpoints
+are listed in the [documentation](https://formulae.brew.sh/docs/api/).
+
+The first argument of `brewr()` is the endpoint. Note that the leading
+slash must be included as well.
+
 ``` r
-brewr::brewr("formula/sqlite")
+brewr::brewr("/formula/sqlite")
 #> {
 #>   "name": "sqlite",
 #>   "full_name": "sqlite",

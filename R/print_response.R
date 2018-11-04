@@ -4,7 +4,7 @@
 #' @param ... Ignored.
 #' @return The JSON result.
 #'
-#' @importFrom jsonlite prettify toJSON fromJSON
+#' @importFrom jsonlite prettify toJSON
 print_response <- function(x, ...) {
-    print(jsonlite::toJSON(x, pretty = TRUE, auto_unbox = TRUE))
+    toJSON(x, pretty = TRUE, auto_unbox = TRUE)
 }
