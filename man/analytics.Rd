@@ -3,7 +3,7 @@
 \docType{data}
 \name{analytics}
 \alias{analytics}
-\title{Endpoints ffrom Homebrews analytics API.}
+\title{Analytics endpoints from Homebrews JSON API}
 \format{A data frame with 19 rows and 1 variable:
 \describe{
   \item{analytics}{a list of all analytics endpoints}

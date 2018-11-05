@@ -1,4 +1,4 @@
-#' Endpoints ffrom Homebrews analytics API.
+#' Analytics endpoints from Homebrews JSON API
 #'
 #' A dataset containing a list of 19 analytics endpoints. This doesn't include
 #' formula endpoints e.g. /formula/sqlite.
