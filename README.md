@@ -13,6 +13,8 @@ coverage](https://codecov.io/gh/tyluRp/brewr/branch/master/graph/badge.svg)](htt
 The goal of brewr is to access [Homebrews JSON
 API](https://formulae.brew.sh/docs/api/) in R.
 
+<img src="man/figures/plot_example.png" align="center"/>
+
 ## Installation
 
 You can install brewr from github using
