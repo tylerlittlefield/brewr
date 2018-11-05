@@ -6,5 +6,5 @@
 #'
 #' @importFrom jsonlite prettify toJSON
 print_response <- function(x, ...) {
-    toJSON(x, pretty = TRUE, auto_unbox = TRUE)
+  toJSON(x, pretty = TRUE, auto_unbox = TRUE)
 }
