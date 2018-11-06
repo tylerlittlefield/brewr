@@ -7,7 +7,7 @@
 brewr(x, ...)
 }
 \arguments{
-\item{x}{Endpoints.}
+\item{x}{Endpoint.}
 
 \item{...}{Ignored.}
 }
