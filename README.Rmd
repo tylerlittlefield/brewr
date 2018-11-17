@@ -50,6 +50,6 @@ os_versions[["items"]]
 
 # Pull install metrics from the last 30 days
 installs <- brewr("/analytics/install/30d")
-installs <- jsonlite::fromJSON(installs)
-head(installs[["items"]], 10)
+installs <- jsonlite::fromJSON(installs)[["items"]]
+head(installs, 10)
 ```

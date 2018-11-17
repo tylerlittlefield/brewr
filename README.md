@@ -43,68 +43,68 @@ os_versions
 #> {
 #>   "category": "install",
 #>   "total_items": 10,
-#>   "start_date": "2018-10-06",
-#>   "end_date": "2018-11-05",
-#>   "total_count": 13160931,
+#>   "start_date": "2018-10-18",
+#>   "end_date": "2018-11-17",
+#>   "total_count": 14301111,
 #>   "items": [
 #>     {
 #>       "number": 1,
-#>       "os_version": "macOS High Sierra (10.13)",
-#>       "count": "5,804,096",
-#>       "percent": "44.10"
+#>       "os_version": "macOS Mojave (10.14)",
+#>       "count": "7,105,424",
+#>       "percent": "49.68"
 #>     },
 #>     {
 #>       "number": 2,
-#>       "os_version": "macOS Mojave (10.14)",
-#>       "count": "5,581,662",
-#>       "percent": "42.41"
+#>       "os_version": "macOS High Sierra (10.13)",
+#>       "count": "5,421,027",
+#>       "percent": "37.91"
 #>     },
 #>     {
 #>       "number": 3,
 #>       "os_version": "macOS Sierra (10.12)",
-#>       "count": "1,100,892",
-#>       "percent": "8.36"
+#>       "count": "1,143,225",
+#>       "percent": "7.99"
 #>     },
 #>     {
 #>       "number": 4,
 #>       "os_version": "OS X El Capitan (10.11)",
-#>       "count": "480,553",
-#>       "percent": "3.65"
+#>       "count": "473,140",
+#>       "percent": "3.31"
 #>     },
 #>     {
 #>       "number": 5,
 #>       "os_version": "OS X Yosemite (10.10)",
-#>       "count": "171,433",
-#>       "percent": "1.30"
+#>       "count": "137,703",
+#>       "percent": "0.96"
 #>     },
 #>     {
 #>       "number": 6,
 #>       "os_version": "OS X Mavericks (10.9)",
-#>       "count": "20,603",
-#>       "percent": "0.16"
+#>       "count": "18,489",
+#>       "percent": "0.13"
 #>     },
 #>     {
 #>       "number": 7,
 #>       "os_version": "macOS (10.15)",
-#>       "count": "725",
+#>       "count": "1,109",
 #>       "percent": "0.01"
 #>     },
 #>     {
 #>       "number": 8,
 #>       "os_version": "Mac OS X Lion (10.7)",
-#>       "count": "591",
+#>       "count": "482",
 #>       "percent": "0.00"
 #>     },
 #>     {
 #>       "number": 9,
 #>       "os_version": "OS X Mountain Lion (10.8)",
-#>       "count": "255",
+#>       "count": "372",
 #>       "percent": "0.00"
 #>     },
 #>     {
 #>       "number": 10,
 #>       "os_version": "Mac OS X Snow Leopard (10.6)",
-#>       "count": "121",
+#>       "count": "140",
 #>       "percent": "0.00"
 #>     }
 #>   ]
@@ -114,30 +114,30 @@ os_versions
 os_versions <- jsonlite::fromJSON(os_versions)
 os_versions[["items"]]
 #>    number                   os_version     count percent
-#> 1       1    macOS High Sierra (10.13) 5,804,096   44.10
-#> 2       2         macOS Mojave (10.14) 5,581,662   42.41
-#> 3       3         macOS Sierra (10.12) 1,100,892    8.36
-#> 4       4      OS X El Capitan (10.11)   480,553    3.65
-#> 5       5        OS X Yosemite (10.10)   171,433    1.30
-#> 6       6        OS X Mavericks (10.9)    20,603    0.16
-#> 7       7                macOS (10.15)       725    0.01
-#> 8       8         Mac OS X Lion (10.7)       591    0.00
-#> 9       9    OS X Mountain Lion (10.8)       255    0.00
-#> 10     10 Mac OS X Snow Leopard (10.6)       121    0.00
+#> 1       1         macOS Mojave (10.14) 7,105,424   49.68
+#> 2       2    macOS High Sierra (10.13) 5,421,027   37.91
+#> 3       3         macOS Sierra (10.12) 1,143,225    7.99
+#> 4       4      OS X El Capitan (10.11)   473,140    3.31
+#> 5       5        OS X Yosemite (10.10)   137,703    0.96
+#> 6       6        OS X Mavericks (10.9)    18,489    0.13
+#> 7       7                macOS (10.15)     1,109    0.01
+#> 8       8         Mac OS X Lion (10.7)       482    0.00
+#> 9       9    OS X Mountain Lion (10.8)       372    0.00
+#> 10     10 Mac OS X Snow Leopard (10.6)       140    0.00
 
 # Pull install metrics from the last 30 days
 installs <- brewr("/analytics/install/30d")
-installs <- jsonlite::fromJSON(installs)
-head(installs[["items"]], 10)
+installs <- jsonlite::fromJSON(installs)[["items"]]
+head(installs, 10)
 #>    number  formula   count percent
-#> 1       1  openssl 420,978    3.21
-#> 2       2   sqlite 354,881    2.70
-#> 3       3     gdbm 347,159    2.64
-#> 4       4     node 309,242    2.35
-#> 5       5 readline 288,241    2.19
-#> 6       6   python 230,765    1.76
-#> 7       7       xz 205,959    1.57
-#> 8       8    icu4c 195,813    1.49
-#> 9       9      git 187,486    1.43
-#> 10     10  gettext 176,655    1.34
+#> 1       1   sqlite 424,108    2.95
+#> 2       2  openssl 418,380    2.91
+#> 3       3     gdbm 408,236    2.84
+#> 4       4   python 325,328    2.27
+#> 5       5     node 325,239    2.27
+#> 6       6 readline 288,910    2.01
+#> 7       7       xz 219,196    1.53
+#> 8       8    icu4c 199,736    1.39
+#> 9       9  gettext 178,141    1.24
+#> 10     10  libtiff 160,465    1.12
 ```
