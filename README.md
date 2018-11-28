@@ -77,3 +77,7 @@ brewr("/analytics/install/30d") %>%
 #> 9       9  libtiff 188,799    1.37
 #> 10     10  gettext 171,245    1.24
 ```
+
+## Shiny demo
+
+See the shiny demo app here: <https://github.com/tyluRp/brewr-shiny>

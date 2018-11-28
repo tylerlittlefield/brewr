@@ -57,3 +57,7 @@ brewr("/analytics/install/30d") %>%
   .$items %>% 
   head(10)
 ```
+
+## Shiny demo
+
+See the shiny demo app here: https://github.com/tyluRp/brewr-shiny
