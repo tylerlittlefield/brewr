@@ -35,21 +35,25 @@ Use the `brewr()` function to access all API endpoints. The endpoints are listed
 
 The first argument of `brewr()` is the endpoint. Note that the leading slash must be included as well.
 
-```{r example}
+```{r example, message=FALSE}
 library(brewr)
+library(dplyr)
+library(jsonlite)
 
 # Pull metrics on macOS versions
 os_versions <- brewr("/analytics/os-version/30d")
 
 # Default output is JSON
-os_versions
+class(os_versions)
 
 # Convert JSON to an R object with jsonlite
-os_versions <- jsonlite::fromJSON(os_versions)
-os_versions[["items"]]
+os_versions %>% 
+  fromJSON() %>% 
+  .$items
 
 # Pull install metrics from the last 30 days
-installs <- brewr("/analytics/install/30d")
-installs <- jsonlite::fromJSON(installs)[["items"]]
-head(installs, 10)
+brewr("/analytics/install/30d") %>% 
+  fromJSON() %>% 
+  .$items %>% 
+  head(10)
 ```
